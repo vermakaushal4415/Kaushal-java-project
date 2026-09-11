@@ -24,10 +24,6 @@ public class CallAnalytics {
     private static final String CALL_END_TIME_COLUMN = "end_time";
     private static final String CALL_DURATION_COLUMN = "duration";
     
-    
-	
-    
-    // Method to get the hour of the day with the highest call volume
     public static int getHourWithHighestCallVolume() throws SQLException {
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
             Map<Integer, Integer> callVolumeByHour = new HashMap<>();
@@ -52,9 +48,7 @@ public class CallAnalytics {
             }
             
         }
-    
-    
-    // Method to get the hour of the day with the longest calls
+
     public static int getHourWithLongestCalls() throws SQLException {
     	
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
@@ -83,7 +77,6 @@ public class CallAnalytics {
         }
     }
     
-    // Method to get the day of the week with the highest call volume
     public static int getDayOfWeekWithHighestCallVolume() throws SQLException {
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
             Map<Integer, Integer> callVolumeByDayOfWeek = new HashMap<>();
@@ -109,10 +102,6 @@ public class CallAnalytics {
             }
             
         }
-    
-    
-    
-    // Method to get the day of the week with the longest calls
     
     public static int getDayOfWeekWithLongestCall() throws SQLException {
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
